@@ -1,0 +1,13 @@
+jupyter:
+  image: jupyter/scipy-notebook
+  ports:
+    - "8888:8888"
+  volumes:
+    - .:/code
+  links:
+    - db
+db:
+  image: mongo
+  volumes: 
+    - ./data/db:/data/db
+    - ./data/configdb:/data/configdb
