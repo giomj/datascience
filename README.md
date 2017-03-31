@@ -1,6 +1,12 @@
 # Usage
 
-Navigate to the project directory
+Clone the repo 
+
+```
+git clone https://github.com/robinagandhi/datascience
+```
+
+Navigate into the project directory
 
 Create the following directories
 
@@ -15,7 +21,8 @@ Make sure Docker has permission to write to these directories. You can adjust th
 docker-compose up
 ```
 
-Copy the authenticated token URL from the terminal and browser to it. 
+Copy the authenticated token URL from the terminal and browse to it. 
+
 Open a new terminal in Jupyter
 
 ```
@@ -41,6 +48,7 @@ def get_db():
     return db
 
 ```
+Load the sample notebooks available into Jupyter and check for errors.
 
 Hit `control+c` to gracefully shutdown the containers when done.
 
