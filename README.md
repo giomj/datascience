@@ -6,16 +6,15 @@ Clone the repo
 git clone https://github.com/robinagandhi/datascience
 ```
 
-Navigate into the project directory
-
-Create the following directories
+Create a named docker volume. Use the name "sciencedata" as shown below.
 
 ```
-mkdir ./data/db
-mkdir ./data/configdb
+docker volume create --name=sciencedata 
 ```
 
-Make sure Docker has permission to write to these directories. You can adjust this in your preferences for Mac and Windows docker process
+Make sure Docker has permission to write to your drives. You can adjust this in your preferences for Mac and Windows docker settings.
+
+Now navigate into the project directory and issue the following command:
 
 ```
 docker-compose up
