@@ -51,3 +51,6 @@ Load the sample notebooks available into Jupyter and check for errors.
 
 Hit `control+c` to gracefully shutdown the containers when done.
 
+## Password protecting Jupyter Notebooks
+- [Instructions](http://jupyter-notebook.readthedocs.io/en/latest/public_server.html)
+
