@@ -3,11 +3,11 @@ jupyter:
   ports:
     - "8888:8888"
   volumes:
-    - .:/code
+    - sciencedata:/code
   links:
     - db
 db:
   image: mongo
   volumes: 
-    - ./data/db:/data/db
-    - ./data/configdb:/data/configdb
+    - sciencedata:/data/db
+    - sciencedata:/data/configdb
