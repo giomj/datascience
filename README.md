@@ -6,6 +6,8 @@ Clone the repo
 git clone https://github.com/robinagandhi/datascience
 ```
 
+Make sure docker is installed and running.
+
 Create a named docker volume. Use the name "sciencedata" as shown below.
 
 ```
