@@ -22,7 +22,11 @@ docker-compose up
 
 Copy the authenticated token URL from the terminal and browse to it. 
 
-Open a new terminal in Jupyter
+Your notebook is ready to use!
+
+If you want to connect with MongoDB using Python then follow the rest of the steps here.
+
+Open a new terminal in Jupyter to install pymongo to interact with MongoDB. 
 
 ```
 conda install pymongo
@@ -35,22 +39,25 @@ cat /etc/hosts
 env | grep DATASCIENCE
 
 ```
-
-Use the connection strings available above to connect using mongo client in your python code.
+If you have your own mongodb instance then use the code below in a notebook to connect to it. 
 
 ```
-#Function to connect to MongoDB Containter
-def get_db():
-    from pymongo import MongoClient
-    client = MongoClient('datascience_db_1:27017')
-    db = client.testDB
-    return db
+import pymongo
+from pymongo import MongoClient
+dbConnectionString = "<<mongo connection string here>>"
+client = MongoClient(dbConnectionString)
+
+``` 
+
+If you want to use just a **test** mongodb instance then continue with the instructions here.
+
+```
+import pymongo
+from pymongo import MongoClient
+client = MongoClient('datascience_db_1:27017')
 
 ```
 Load the sample notebooks available into Jupyter and check for errors.
 
-Hit `control+c` to gracefully shutdown the containers when done.
-
-## Password protecting Jupyter Notebooks
-- [Instructions](http://jupyter-notebook.readthedocs.io/en/latest/public_server.html)
+Hit `control+c` in the terminal to gracefully shutdown the containers when done.
 
